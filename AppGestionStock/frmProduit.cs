@@ -73,10 +73,14 @@ namespace AppGestionStock
                 bd.produit.Add(p);
                 bd.SaveChanges();
                 Effacer();
-            } catch (Exception)
+
+            }
+            catch (Exception)
             {
 
             }
+
+
 
         }
 
@@ -93,6 +97,7 @@ namespace AppGestionStock
                 nudMinimum.Value = Convert.ToDecimal(dgProduit.CurrentRow.Cells[6].Value);
                 nudCritique.Value = Convert.ToDecimal(dgProduit.CurrentRow.Cells[7].Value);
                 rtxtDescription.Text = dgProduit.CurrentRow.Cells[9].Value.ToString();
+                imageLocationtxt.Text = dgProduit.CurrentRow.Cells[8].Value.ToString();
             }catch (Exception)
             {
 
@@ -109,15 +114,7 @@ namespace AppGestionStock
                 p.idC = (cbbCategorie.SelectedIndex + 1);
                 p.codeProduit = txtCode.Text;
                 p.denominationProduit = txtDenomination.Text;
-                try
-                {
-                    p.pu = Convert.ToInt32(txtPU.Text);
-
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
+                p.pu = Convert.ToInt32(txtPU.Text);
                 p.description = rtxtDescription.Text;
                 p.qte = Convert.ToInt32(Math.Round(nudQuantite.Value, 0));
                 p.qteMinimum = Convert.ToInt32(Math.Round(nudMinimum.Value, 0));
@@ -145,7 +142,7 @@ namespace AppGestionStock
                 bd.SaveChanges();
                 Effacer();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 
             }
