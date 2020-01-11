@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="bdstockModelStoreContainer" CdmEntityContainer="bdstockEntities">
+    <EntitySetMapping Name="categorie">
+      <EntityTypeMapping TypeName="bdstockModel.categorie">
+        <MappingFragment StoreEntitySet="categorie">
+          <ScalarProperty Name="idC" ColumnName="idC" />
+          <ScalarProperty Name="codeC" ColumnName="codeC" />
+          <ScalarProperty Name="denominationC" ColumnName="denominationC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="produit">
+      <EntityTypeMapping TypeName="bdstockModel.produit">
+        <MappingFragment StoreEntitySet="produit">
+          <ScalarProperty Name="ipProduit" ColumnName="ipProduit" />
+          <ScalarProperty Name="codeProduit" ColumnName="codeProduit" />
+          <ScalarProperty Name="denominationProduit" ColumnName="denominationProduit" />
+          <ScalarProperty Name="qte" ColumnName="qte" />
+          <ScalarProperty Name="pu" ColumnName="pu" />
+          <ScalarProperty Name="idC" ColumnName="idC" />
+          <ScalarProperty Name="qteMinimum" ColumnName="qteMinimum" />
+          <ScalarProperty Name="qteCritique" ColumnName="qteCritique" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
